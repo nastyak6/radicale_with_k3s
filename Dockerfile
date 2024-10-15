@@ -1,5 +1,7 @@
 FROM python:3.10
+
 WORKDIR /app
+
 RUN python3 -m pip install radicale bcrypt
 
 EXPOSE 5232
