@@ -1,4 +1,6 @@
 # Radicale with Kubernetes
+![image](https://github.com/user-attachments/assets/195eb3d2-4b72-4bef-b3f1-41a635c4decd)
+
 
 This repository demonstrates how to deploy the Radicale calendar server in a Kubernetes cluster.
 
