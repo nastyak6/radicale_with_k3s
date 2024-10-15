@@ -18,11 +18,9 @@ spec:
         ports:
         - containerPort: 5232
         volumeMounts:
-        # Mount for the config file
         - name: radicale-config
           mountPath: /app/config/radicale.conf
           subPath: radicale.conf
-        # Mount for the persistent data storage
         - name: radicale-storage
           mountPath: /app/data
       volumes:
