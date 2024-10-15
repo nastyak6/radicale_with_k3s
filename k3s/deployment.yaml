@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: radicale
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: radicale
+  template:
+    metadata:
+      labels:
+        app: radicale
+    spec:
+      containers:
+      - name: radicale
+        image: nastyak6/radicale:latest
+        ports:
+        - containerPort: 5232
+        volumeMounts:
+        # Mount for the config file
+        - name: radicale-config
+          mountPath: /app/config/radicale.conf
+          subPath: radicale.conf
+        # Mount for the persistent data storage
+        - name: radicale-storage
+          mountPath: /app/data
+      volumes:
+      - name: radicale-config
+        configMap:
+          name: radicale-config
+      - name: radicale-storage
+        persistentVolumeClaim:
+          claimName: radicale-pvc

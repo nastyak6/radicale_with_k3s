@@ -1,0 +1,1 @@
+To install, simply run the script: apply_radicle.sh

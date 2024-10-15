@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: radicale-config
+  namespace: default
+data:
+  radicale.conf: |
+    [server]
+    # Bind the server to all available addresses
+    hosts = 0.0.0.0:5232
+
+    [auth]
+    type = htpasswd
+    htpasswd_filename = /app/users
+    htpasswd_encryption = plain
+
+    [storage]
+    type = multifilesystem
+    filesystem_folder = /app/data
+
+    [logging]
+    level = info
