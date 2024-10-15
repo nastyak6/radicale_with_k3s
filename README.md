@@ -17,4 +17,4 @@ Then, open your web browser and navigate to:
 http://localhost:5232/.web/
 ```
 
-You will be prompted to log in. Use the username and password defined in the /config/users file.
+You will be prompted to log in. Use the username and password defined in the [/config/users](https://github.com/nastyak6/radicale_with_k8s/blob/main/config/users) file.
